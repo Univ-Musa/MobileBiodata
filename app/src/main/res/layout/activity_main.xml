@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0f131d"
+    android:background="@color/bg"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
-        app:cardBackgroundColor="#1C1F2A"
+        app:cardBackgroundColor="@color/bgCard"
         app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +63,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:text="Musa Bakhtiar"
                 android:textAlignment="center"
-                android:textColor="#DFE2F1"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -113,4 +113,5 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
