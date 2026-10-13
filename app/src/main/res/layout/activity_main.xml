@@ -9,17 +9,19 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         app:cardBackgroundColor="@color/bgCard"
         app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523">
+        app:layout_constraintVertical_bias="0.6">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,30 +32,33 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="104dp"
                 android:layout_height="104dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 app:cardBackgroundColor="#496C73"
                 app:cardCornerRadius="52dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     app:cardCornerRadius="50dp"
                     app:cardElevation="0dp">
 
                     <ImageView
                         android:id="@+id/imageView2"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_gravity="center_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="Profile"
+                        android:scaleType="centerCrop"
                         app:srcCompat="@drawable/foto_profile" />
 
                 </androidx.cardview.widget.CardView>
+
             </androidx.cardview.widget.CardView>
 
             <Space
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="16dp"
                 android:layout_marginTop="10dp" />
 
             <TextView
@@ -67,14 +72,6 @@
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <View
-                android:id="@+id/divider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="#2A303F" />
-
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
@@ -82,15 +79,17 @@
                 android:layout_gravity="center_horizontal"
                 android:text="NIM: 252070015"
                 android:textAlignment="center"
-                android:textColor="#94D7E2"
+                android:textColor="@color/gold"
                 android:textSize="14sp" />
 
-            <Space
+            <View
+                android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginBottom="18dp"
-                android:background="#2A303F" />
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#8B949E" />
+
 
             <TextView
                 android:id="@+id/textView4"
@@ -99,7 +98,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Teknik Informatika"
                 android:textAlignment="center"
-                android:textColor="#BCC9CD"
+                android:textColor="@color/textputih"
                 android:textSize="15sp" />
 
             <TextView
@@ -108,10 +107,56 @@
                 android:layout_height="wrap_content"
                 android:text="Universitas Madani"
                 android:textAlignment="center"
-                android:textColor="#94A3B8"
+                android:textColor="#8B949E"
                 android:textSize="13sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:drawableStart="@drawable/mail_icon"
+                android:text="Email: 252070017_musa@umad.ac.id"
+                android:textAlignment="gravity"
+                android:textColor="@color/textputih" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="164dp"
+        android:layout_height="152dp"
+        android:contentDescription="Logo_Umad"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271"
+        app:srcCompat="@drawable/umad1" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="BIODATA MAHASISWA"
+        android:textColor="@color/gold"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
